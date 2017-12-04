@@ -6,6 +6,7 @@
    var slide = 1;
    var slides = 10;
    var dirs = ['up', 'right', 'down', 'left'];
+   var clickones = false
 
    function byId(id) {
      return doc.getElementById(id);
@@ -144,8 +145,7 @@
    }
 
    preloadImages(slides);
-   overlay();
-   play(slides, 3000);
+   
 
 
 
@@ -440,8 +440,21 @@
   });
 
   initVars();
-  frame();
+  
+  document.addEventListener('touchstart',function(){
+    if(!clickones){
+      clickones = true
+      var text = document.querySelector('.happy')
+      text.style.animation = 'out 6s alternate'
+      setTimeout(function(){
+        text.style.display = 'none'
+      },5900)
+      frame();
 
-
+      overlay();
+      play(slides, 3000);
+    }
+  })
+  
 
  })(window, document);
