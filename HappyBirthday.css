@@ -471,9 +471,34 @@ html,body {
   width: 100%;
   font-size: 100px;
   text-align: center;
-  transition: 3s;
   position: absolute;
   top: 40vh;
+  animation: out 6s;
+  opacity:0;
+  filter:Alpha(opacity=0);
+}
+@-webkit-keyframes out {
+  1%{
+    opacity:.1;
+    filter:Alpha(opacity=10);
+  }
+  50% {
+    opacity:1;
+    filter:Alpha(opacity=100);
+  }
+  100% {
+    opacity:0;
+    filter:Alpha(opacity=0);
+    display: none;
+  }
+}
+@keyframes out {
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 }
 small{
   font-size: 50px;

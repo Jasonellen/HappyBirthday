@@ -1,5 +1,5 @@
  (function(win, doc) {
-
+    
    var img=doc.createElement('div');
    var timer = [];
    var block = false;
