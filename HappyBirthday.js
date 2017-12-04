@@ -132,7 +132,7 @@
 
 
    function delaySlide(n, int) {
-     timer[n] = setTimeout(function() {
+     timer[n] = setInterval(function() {
        next(-1);
      }, int * (n + 1));
    }
