@@ -118,17 +118,17 @@
      });
    });
 
-   byId('next').addEventListener('click', function() {
-     stop();
-     next(-1);
-     play(slides, 8000);
-   });
+   // byId('next').addEventListener('click', function() {
+   //   stop();
+   //   next(-1);
+   //   play(slides, 8000);
+   // });
 
-   byId('prev').addEventListener('click', function() {
-      stop();
-      next(1);
-      play(slides, 8000);
-   });
+   // byId('prev').addEventListener('click', function() {
+   //    stop();
+   //    next(1);
+   //    play(slides, 8000);
+   // });
 
 
    function delaySlide(n, int) {
