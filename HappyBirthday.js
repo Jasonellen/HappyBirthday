@@ -284,6 +284,7 @@
     }
     d=Math.sqrt((x-playerX)*(x-playerX)+(y-playerY)*(y-playerY)+(z-playerZ)*(z-playerZ));
     pow.volume=1.5/(1+d/10);
+    pow.load()
     pow.play();
   }
 
