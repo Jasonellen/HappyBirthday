@@ -1,8 +1,8 @@
  (function(win, doc) {
-  window.vConsole = new window.VConsole({
-    defaultPlugins: ['system', 'network', 'element', 'storage'], // 可以在此设定要默认加载的面板
-    maxLogNumber: 1000
-  });
+  // window.vConsole = new window.VConsole({
+  //   defaultPlugins: ['system', 'network', 'element', 'storage'], // 可以在此设定要默认加载的面板
+  //   maxLogNumber: 1000
+  // });
 
 
    var img=doc.createElement('div');
