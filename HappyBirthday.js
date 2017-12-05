@@ -1,5 +1,10 @@
  (function(win, doc) {
-    
+  window.vConsole = new window.VConsole({
+    defaultPlugins: ['system', 'network', 'element', 'storage'], // 可以在此设定要默认加载的面板
+    maxLogNumber: 1000
+  });
+
+
    var img=doc.createElement('div');
    var timer = [];
    var block = false;
@@ -229,7 +234,8 @@
     seed.born=frames;
     seeds.push(seed);
   }
-
+  
+  var abcd = 0;
   function splode(x,y,z){
     
     t=5+parseInt(Math.random()*150);
@@ -284,6 +290,11 @@
     }
     d=Math.sqrt((x-playerX)*(x-playerX)+(y-playerY)*(y-playerY)+(z-playerZ)*(z-playerZ));
     pow.volume=1.5/(1+d/10);
+    abcd++
+    if(abcd == 1){
+      console.log(pow,'=========')
+    }
+    
     pow.load()
     pow.play();
   }
